@@ -1,4 +1,3 @@
-import axios from "axios";
 import "./style.css"
 import { getWeather } from "./weather"
 import { ICON_MAP } from "./icon-map"
