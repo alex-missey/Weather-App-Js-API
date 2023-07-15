@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="./style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://cdn.iconscout.com/icon/free/png-512/free-weather-296-1100758.png">
@@ -11,7 +12,7 @@
 <body class="blurred">
   <header class="header">
     <div class="header-left">
-      <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
+      <img class="weather-icon large" src="./public/icons/sun.svg" data-current-icon />
       <div class=".header-current-temp">
         <span data-current-temp>31</span>&deg;
       </div>
@@ -54,44 +55,44 @@
 
   <section class="day-section" data-day-section>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Monday</div>
       <div>32&deg;</div>
     </div>
     <!-- didn't put deg; into it's own span because we are making a template for the day card-->
     <!-- hard coded values allow us to test out the page as we're coding; remove later on-->
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Monday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Tuesday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Wednesday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Thursday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Friday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Saturday</div>
       <div>32&deg;</div>
     </div>
     <div class="day-card">
-      <img src="icons/cloud.svg" class="weather-icon">
+      <img src="./public/icons/cloud.svg" class="weather-icon">
       <div class="day-card-day">Sunday</div>
       <div>32&deg;</div>
     </div>
@@ -107,7 +108,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -139,7 +140,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -171,7 +172,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -203,7 +204,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -235,7 +236,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -267,7 +268,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -299,7 +300,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -331,7 +332,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -363,7 +364,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -395,7 +396,7 @@
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" class="weather-icon">
+          <img src="./public/icons/cloud.svg" class="weather-icon">
         </td>
         <td>
           <div class="info-group">
@@ -464,7 +465,8 @@
       </td>
     </tr>
   </template>
-  <script type="module" src="/main.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>
