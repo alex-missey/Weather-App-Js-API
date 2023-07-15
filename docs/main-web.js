@@ -1,5 +1,5 @@
 import "./style.css"
-import { getWeather } from "./weather"
+import { getWeather } from "./weather-web"
 import { ICON_MAP } from "./icon-map"
 
 /* Declare all constants at the begining of the file so they are accessible instantly at runtime */

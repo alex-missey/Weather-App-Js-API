@@ -1,6 +1,3 @@
-/* Comment out import for web 
-import axios from "axios";
-*/
 
 // For our API
 // We want all dates in our timezone and need latitude and longitude
