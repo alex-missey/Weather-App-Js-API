@@ -8,7 +8,7 @@ import axios from "axios";
 
 export function getWeather(lat, lon, timezone) {
     return axios.get(
-        "https://api.open-meteo.com/v1/forecast?&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime", 
+        "https://api.open-meteo.com/v1/forecast?&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime",
         {
             params: {
                 latitude: lat,
@@ -16,7 +16,7 @@ export function getWeather(lat, lon, timezone) {
                 timezone,
             }
         }
-    ).then(({data}) => {
+    ).then(({ data }) => {
         //return data
         return {
             current: parseCurrentWeather(data),
@@ -26,7 +26,7 @@ export function getWeather(lat, lon, timezone) {
     })
 }
 
-function parseCurrentWeather({current_weather, daily}) {
+function parseCurrentWeather({ current_weather, daily }) {
     const {
         temperature: currentTemp,
         windSpeed: windSpeed,
@@ -58,7 +58,7 @@ function parseCurrentWeather({current_weather, daily}) {
     } // These are the different things we need to get from the API ^^^
 }
 
-function parseDailyWeather({daily}) {
+function parseDailyWeather({ daily }) {
     return daily.time.map((time, index) => {
         // Loop through object, get time value (array) and map over that array (time value)
         return { // returns object containing data we need (date, temp, and icon)
@@ -69,7 +69,7 @@ function parseDailyWeather({daily}) {
     })
 }
 
-function parseHourlyWeather({hourly, current_weather}) {
+function parseHourlyWeather({ hourly, current_weather }) {
     // need current weather to know what hour to start at
     return hourly.time.map((time, index) => {
         return {
@@ -82,5 +82,5 @@ function parseHourlyWeather({hourly, current_weather}) {
             // haven't filtered what our current time is using current_weather yet
 
         }
-    }).filter(({timestamp}) => timestamp >= current_weather.time * 1000)
+    }).filter(({ timestamp }) => timestamp >= current_weather.time * 1000)
 }
