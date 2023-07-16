@@ -1,6 +1,4 @@
 import "./style.css"
-import { getWeather } from "./weather-web.js"
-import { ICON_MAP } from "./icon-map.js"
 
 /* Declare all constants at the begining of the file so they are accessible instantly at runtime */
 
